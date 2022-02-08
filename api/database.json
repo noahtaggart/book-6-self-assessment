@@ -1,7 +1,11 @@
 {
-    "formField":[],
-    "authors":[],
+    "formFields":[],
+    "authors":[
+        { "id":1, "authorName": "Charles Dickens", "authorEmail":"charles@dickens.com" },
+        { "id":2, "authorName": "Stephen King", "authorEmail":"stephenking@pennywise.com" },
+        { "id":3, "authorName": "Rick Riordan", "authorEmail":"daddyrick@greekgodsarecool.com" }
+    ],
     "topics":[],
-    "recipient":[]
+    "recipients":[]
 
 }
