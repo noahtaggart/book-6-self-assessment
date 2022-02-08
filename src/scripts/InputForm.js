@@ -1,6 +1,6 @@
 import {getTopics, getRecipients } from "./dataAccess.js"
 import {Authors} from "./AuthorsDropDown.js"
-
+import { Topics } from "./Topics.js"
 
 //function to outline html to be later rendered
 export const InputForm = () => {
@@ -20,6 +20,10 @@ export const InputForm = () => {
         <div class="field">
             <label class="label" for="letter">Letter</label>
             <input type="text" name="letter" class="input"  style=height:200px />
+        </div>
+        <div class="field">
+            <label class="label" for="topics">Topics</label>
+            ${Topics()}
         </div>
 
         <div class="field">
