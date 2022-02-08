@@ -1,9 +1,9 @@
 //temporary state
 const applicationState = {
-    authors:[],
     recipients:[],
     topics:[],
-    formFields:[]
+    formFields:[],
+    authors:[]
 
 }
 //sets html target
@@ -29,9 +29,21 @@ export const fetchFormFields = () => {
     return fetch(`${API}/formFields`)
         .then(response => response.json())
         .then(
-            (serviceFormField) => {
+            (letterFormField) => {
                 //store external state in temporary state
-                applicationState.formFields = serviceFormField
+                applicationState.formFields = letterFormField
+            }
+        )
+}
+
+//fetches authors from the database
+export const fetchAuthors = () => {
+    return fetch(`${API}/authors`)
+        .then(response => response.json())
+        .then(
+            (serviceAuthors) => {
+                //store external state in temporary state
+                applicationState.authors = serviceAuthors
             }
         )
 }
