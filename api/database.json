@@ -13,6 +13,10 @@
         {"id":5, "topicName":"Condolences"}
 
     ],
-    "recipients":[]
+    "recipients":[
+        {"id":1, "recipientName":"Billy Shakespear", "recipientEmail":"billy@theglobe.uk"},
+        {"id":2, "recipientName":"JRR Tolkien", "recipientEmail":"tolk-up@ringofpower.edu"},
+        {"id":3, "recipientName":"George RR Martin", "recipientEmail":"slowestwriter@nightswatch.com"}
+    ]
 
 }
