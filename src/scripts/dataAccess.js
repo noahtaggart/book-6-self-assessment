@@ -36,14 +36,14 @@ export const fetchFormFields = () => {
         )
 }
 
-//fetches formAuthors from the database
+//fetches authors from the database
 export const fetchAuthors = () => {
     return fetch(`${API}/authors`)
         .then(response => response.json())
         .then(
-            (Authors) => {
+            (serviceAuthors) => {
                 //store external state in temporary state
-                applicationState.authors = Authors
+                applicationState.authors = serviceAuthors
             }
         )
 }

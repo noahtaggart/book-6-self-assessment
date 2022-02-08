@@ -10,7 +10,7 @@ const authors = getAuthors()
     
     //itterate through authors 
     for (const author of authors) {
-        html += `<option selected class="select" value="${author.id}">${author.name}</option>`
+        html += `<option class="select" value="${author.id}">${author.authorName}</option>`
     }
     html += "</select>"
     return html

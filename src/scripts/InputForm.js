@@ -19,7 +19,7 @@ export const InputForm = () => {
         </div>
         <div class="field">
             <label class="label" for="letter">Letter</label>
-            <input type="text" name="letter" class="input" />
+            <input type="text" name="letter" class="input"  style=height:200px />
         </div>
 
         <div class="field">
