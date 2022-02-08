@@ -1,11 +1,11 @@
-import { getAuthors, getTopics, getRecipients } from "./dataAccess.js"
+import {getTopics, getRecipients } from "./dataAccess.js"
+import {Authors} from "./AuthorsDropDown.js"
 
 
 //function to outline html to be later rendered
 export const InputForm = () => {
 
     //saves database exports as variables
-    const authors = getAuthors()
     const topics = getTopics()
     const recipients = getRecipients()
 
@@ -13,8 +13,9 @@ export const InputForm = () => {
     //lays out input form in html
     let html = `
         <div class="field">
-            <label class="label" for="author">Choose author...</label>
-            
+            <label class="label" for="author">Author</label>
+            ${Authors()}
+
         </div>
         <div class="field">
             <label class="label" for="letter">Letter</label>
