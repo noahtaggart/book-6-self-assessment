@@ -1,5 +1,5 @@
 
-import { fetchFormFields, fetchAuthors, fetchTopics } from "./dataAccess.js"
+import { fetchFormFields, fetchAuthors, fetchTopics, fetchRecipients } from "./dataAccess.js"
 import { PenPalSociety } from "./PenPalSociety.js"
 
 //targets container to render html in
@@ -10,6 +10,7 @@ const render = () => {
     fetchFormFields()
     .then(() => fetchAuthors())
     .then(() => fetchTopics())
+    .then(() => fetchRecipients())
     .then(() => {
             mainContainer.innerHTML = PenPalSociety()
         }

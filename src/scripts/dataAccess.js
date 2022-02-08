@@ -60,6 +60,18 @@ export const fetchTopics = () => {
         )
 }
 
+//fetches recipient from the database
+export const fetchRecipients = () => {
+    return fetch(`${API}/recipients`)
+        .then(response => response.json())
+        .then(
+            (recipients) => {
+                //store external state in temporary state
+                applicationState.recipients = recipients
+            }
+        )
+}
+
 //sends data back to database
 export const sendFormField = (userServiceRequest) => {
     const fetchOptions = {
