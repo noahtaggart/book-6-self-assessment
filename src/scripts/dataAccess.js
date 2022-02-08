@@ -41,9 +41,21 @@ export const fetchAuthors = () => {
     return fetch(`${API}/authors`)
         .then(response => response.json())
         .then(
-            (serviceAuthors) => {
+            (Authors) => {
                 //store external state in temporary state
-                applicationState.authors = serviceAuthors
+                applicationState.authors = Authors
+            }
+        )
+}
+
+//fetches topics from the database
+export const fetchTopics = () => {
+    return fetch(`${API}/topics`)
+        .then(response => response.json())
+        .then(
+            (topics) => {
+                //store external state in temporary state
+                applicationState.topics = topics
             }
         )
 }

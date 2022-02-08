@@ -5,7 +5,14 @@
         { "id":2, "authorName": "Stephen King", "authorEmail":"stephenking@pennywise.com" },
         { "id":3, "authorName": "Rick Riordan", "authorEmail":"daddyrick@greekgodsarecool.com" }
     ],
-    "topics":[],
+    "topics":[
+        {"id":1, "topicName":"Business"},
+        {"id":2, "topicName":"Friendly"},
+        {"id":3, "topicName":"Family"},
+        {"id":4, "topicName":"Congratulations"},
+        {"id":5, "topicName":"Condolences"}
+
+    ],
     "recipients":[]
 
 }
