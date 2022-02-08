@@ -10,7 +10,7 @@ export const Recipients = () => {
 
     //itterate through recipients
     const listItems = recipients.map(recipient => {
-        return `<option class="select" value="${recipient.id}">${recipient.recipientName}</option>`
+        return `<option class="select" name ="recipient" value="${recipient.id}">${recipient.recipientName}</option>`
     })
     html += listItems
     html += `</select>`

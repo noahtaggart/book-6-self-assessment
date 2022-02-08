@@ -1,9 +1,7 @@
 //temporary state
 const applicationState = {
-    recipients:[],
-    topics:[],
-    formFields:[],
-    authors:[]
+    authorId = null
+    
 
 }
 //sets html target
@@ -88,4 +86,10 @@ export const sendFormField = (userServiceRequest) => {
         .then(() => {
             mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
         })
+}
+
+export const setAuthor = () => {
+    applicationState.author = authorId
+    document.dispatchEvent(new CustomEvent("stateChanged"))
+
 }

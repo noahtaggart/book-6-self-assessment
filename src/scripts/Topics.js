@@ -6,7 +6,7 @@ export const Topics = () => {
         let html = "<ul>"
 
         const listItems = topics.map(topic => {
-            return `<input type="radio" value=${topic.id}"> ${topic.topicName}`
+            return `<input type="radio" name="topic" value=${topic.id}"> ${topic.topicName}`
         })
         html += listItems.join("")
         html += "</ul>"
