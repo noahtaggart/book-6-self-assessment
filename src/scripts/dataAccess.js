@@ -17,6 +17,10 @@ const API = "http://localhost:8000"
 
 
 //exports COPIES of database arrays
+export const getFormFields = () => {
+    return applicationState.formFields.map(formField => ({...formField}))
+}
+
 export const getAuthors = () => {
     return applicationState.authors.map(author => ({...author}))
 }
