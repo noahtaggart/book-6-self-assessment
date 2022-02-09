@@ -1,4 +1,4 @@
-import { getRecipients } from "./dataAccess.js";
+import { getRecipients, setRecipient } from "./dataAccess.js";
 
 //function to create dropdown of recipients
 export const Recipients = () => {
@@ -10,7 +10,7 @@ export const Recipients = () => {
 
     //itterate through recipients
     const listItems = recipients.map(recipient => {
-        return `<option class="select" value="${recipient.id}">${recipient.recipientName}</option>`
+        return `<option class="select" name ="recipient" value="${recipient.id}">${recipient.recipientName}</option>`
     })
     html += listItems
     html += `</select>`
@@ -18,6 +18,16 @@ export const Recipients = () => {
     
     
 }
+
+document.addEventListener(
+    "change",
+    (event) => {
+        if (event.target.name === "recipient") {
+            setRecipient(parseInt(event.target.value))
+        }
+    }
+)
+
 
 /*ask why this .map didn't work
 for (const recipient of recipients) {

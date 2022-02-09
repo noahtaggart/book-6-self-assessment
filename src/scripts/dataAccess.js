@@ -1,10 +1,13 @@
 //temporary state
 const applicationState = {
-    recipients:[],
-    topics:[],
-    formFields:[],
-    authors:[]
+    
+    
 
+}
+
+//export transient state
+export const transientState = () => {
+    return applicationState
 }
 //sets html target
 const mainContainer = document.querySelector("#mainContainer")
@@ -88,4 +91,25 @@ export const sendFormField = (userServiceRequest) => {
         .then(() => {
             mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
         })
+}
+
+//sets author as current state
+export const setAuthor = (authorId) => {
+    applicationState.author = authorId
+    document.dispatchEvent(new CustomEvent("stateChanged"))
+
+}
+
+//sets recipient as current state
+export const setRecipient = (recipientId) => {
+    applicationState.recipient = recipientId
+    document.dispatchEvent(new CustomEvent("stateChanged"))
+
+}
+
+//sets topic as current state
+export const setTopic = (topicId) => {
+    applicationState.topic = topicId
+    document.dispatchEvent(new CustomEvent("stateChanged"))
+
 }
