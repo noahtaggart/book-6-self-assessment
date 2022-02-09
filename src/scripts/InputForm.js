@@ -1,4 +1,4 @@
-import {getTopics, getRecipients, sendFormField } from "./dataAccess.js"
+import {getTopics, getRecipients, sendFormField, transientState } from "./dataAccess.js"
 import {Authors} from "./AuthorsDropDown.js"
 import { Topics } from "./Topics.js"
 import { Recipients } from "./Recipient.js"
@@ -45,12 +45,14 @@ const mainContainer = document.querySelector("#mainContainer")
 //adds event listeners to all the inputs and automatically grabs date and time
 
 mainContainer.addEventListener("click", clickEvent => {
+    const state = transientState()
     if (clickEvent.target.id === "submitLetter") {
         //stores transient state as different variables
         const letter = document.querySelector("input[name=letter]").value
-        const author = applicationState.authorId
-        const topic = document.querySelector("input[name=topic]").value
-        const recipient = document.querySelector("input[name=recipient]").value
+        const author = state.author
+        const topic = state.topic
+        const recipient = state.recipient
+        const currentDate = Date.now()
 
         //make and object out of the user input
         const letterData = {
@@ -58,7 +60,7 @@ mainContainer.addEventListener("click", clickEvent => {
             letter: letter,
             topic: topic,
             recipient: recipient,
-            date: date.now()
+            date: currentDate
         }
 
         sendFormField(letterData)

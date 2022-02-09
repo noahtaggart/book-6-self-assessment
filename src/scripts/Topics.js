@@ -1,4 +1,4 @@
-import { getTopics } from "./dataAccess.js";
+import { getTopics, setTopic } from "./dataAccess.js";
 
 //function creates radio selection of topics
 export const Topics = () => {
@@ -13,3 +13,13 @@ export const Topics = () => {
 
         return html
     }
+
+    
+    document.addEventListener(
+        "change",
+        (event) => {
+            if (event.target.name === "topic") {
+                setTopic(parseInt(event.target.value))
+            }
+        }
+    )
