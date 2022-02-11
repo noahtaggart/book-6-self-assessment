@@ -1,5 +1,5 @@
 {
-  "formFields": [
+  "letters": [
     {
       "authorId": 2,
       "letter": "fda",
@@ -7,6 +7,22 @@
       "recipient": 2,
       "date": 1644376786060,
       "id": 1
+    },
+    {
+      "authorId": 1,
+      "letter": "fadsfafasdfsda",
+      "topic": 1,
+      "recipient": 3,
+      "date": 1644420722160,
+      "id": 2
+    },
+    {
+      "authorId": 1,
+      "letter": "hi",
+      "topic": 2,
+      "recipient": 2,
+      "date": 1644421636293,
+      "id": 3
     }
   ],
   "authors": [

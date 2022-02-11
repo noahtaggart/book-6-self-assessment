@@ -1,5 +1,5 @@
 import { InputForm } from "./InputForm.js"
-//import { Letters } from "./Letters.js"
+import { Letters } from "./Letters.js"
 
 
 export const PenPalSociety = () => {
@@ -11,7 +11,7 @@ export const PenPalSociety = () => {
 
         <section class="letters">
         <h2>Letters</h2>
-
+        ${Letters()}
         </section>
         `
 }

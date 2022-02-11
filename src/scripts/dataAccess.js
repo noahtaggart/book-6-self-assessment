@@ -13,10 +13,14 @@ export const transientState = () => {
 const mainContainer = document.querySelector("#mainContainer")
 
 //sets api server location
-const API = "http://localhost:8000"
+const API = "http://localhost:8088"
 
 
 //exports COPIES of database arrays
+export const getLetters = () => {
+    return applicationState.letters.map(letter => ({...letter}))
+}
+
 export const getAuthors = () => {
     return applicationState.authors.map(author => ({...author}))
 }
@@ -27,14 +31,14 @@ export const getTopics = () => {
     return applicationState.topics.map(topic => ({...topic}))
 }
 
-//fetches formFields from the database
-export const fetchFormFields = () => {
-    return fetch(`${API}/formFields`)
+//fetches letters from the database
+export const fetchLetters = () => {
+    return fetch(`${API}/letters`)
         .then(response => response.json())
         .then(
-            (letterFormField) => {
+            (letters) => {
                 //store external state in temporary state
-                applicationState.formFields = letterFormField
+                applicationState.letters = letters
             }
         )
 }
